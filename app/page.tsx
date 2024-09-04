@@ -65,6 +65,8 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const sceneRef = useRef<THREE.Scene | null>(null)
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null)
+  const rendererRef = useRef<THREE.WebGLRenderer | null>(null)
+  const controlsRef = useRef<OrbitControls | null>(null)
   const planesRef = useRef<THREE.Mesh[]>([])
   const particlesRef = useRef<THREE.Mesh[]>([])
   const [isLoading, setIsLoading] = useState(true)
