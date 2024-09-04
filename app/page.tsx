@@ -59,7 +59,6 @@ const galleryData = [
   }
 ]
 
-]
 
 export default function Gallery() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
