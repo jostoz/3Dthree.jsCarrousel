@@ -59,6 +59,8 @@ const galleryData = [
   }
 ]
 
+]
+
 export default function Gallery() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -71,7 +73,7 @@ export default function Gallery() {
   const particlesRef = useRef<THREE.Mesh[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
+  const initScene = useCallback(() => {
     if (!canvasRef.current) return
 
     const scene = new THREE.Scene()
@@ -80,7 +82,7 @@ export default function Gallery() {
     cameraRef.current = camera
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true })
     renderer.setSize(window.innerWidth, window.innerHeight)
-    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enableDamping = true
@@ -95,6 +97,9 @@ export default function Gallery() {
     const radius = 10
     const planeWidth = 4
     const planeHeight = 5
+
+    const textureLoader = new THREE.TextureLoader()
+    textureLoader.setPath('/images/') // Make sure images are in the public folder
 
     galleryData.forEach((item, i) => {
       const angle = (i / galleryData.length) * Math.PI * 2
@@ -113,15 +118,20 @@ export default function Gallery() {
       scene.add(plane)
       planesRef.current.push(plane)
 
-      new THREE.TextureLoader().load(item.image, (texture) => {
-        plane.material.map = texture
-        plane.material.needsUpdate = true
-      })
+      textureLoader.load(
+        item.image,
+        (texture) => {
+          plane.material.map = texture
+          plane.material.needsUpdate = true
+          if (i === galleryData.length - 1) setIsLoading(false)
+        },
+        undefined,
+        (error) => console.error('An error occurred loading the texture', error)
+      )
     })
 
     // Background layer (floating particles)
     const particleCount = 100
-    const textureLoader = new THREE.TextureLoader()
 
     for (let i = 0; i < particleCount; i++) {
       const texture = textureLoader.load(galleryData[Math.floor(Math.random() * galleryData.length)].image)
@@ -173,9 +183,13 @@ export default function Gallery() {
 
     window.addEventListener('click', onMouseClick)
 
+    const clock = new THREE.Clock()
+
     function animate() {
       requestAnimationFrame(animate)
-      controls.update()
+
+      const delta = clock.getDelta()
+      controls.update(delta)
 
       // Animate background particles
       particlesRef.current.forEach((particle) => {
@@ -190,7 +204,8 @@ export default function Gallery() {
 
       renderer.render(scene, camera)
     }
-    animate()
+
+    const animationFrameId = requestAnimationFrame(animate)
 
     function handleResize() {
       if (cameraRef.current) {
@@ -227,58 +242,120 @@ export default function Gallery() {
 
     window.addEventListener('scroll', handleScroll)
 
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape' && selectedImage !== null) {
+        setSelectedImage(null);
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
     return () => {
       window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('mousemove', onMouseMove)
       window.removeEventListener('click', onMouseClick)
+      window.removeEventListener('keydown', handleKeyDown)
+      cancelAnimationFrame(animationFrameId)
     }
-  }, [])
+  }, [selectedImage])
+
+  useEffect(() => {
+    initScene()
+  }, [initScene])
 
   const handleCloseFullPage = () => {
     setSelectedImage(null)
   }
 
+  const handlePrevImage = () => {
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : galleryData.length - 1))
+  }
+
+  const handleNextImage = () => {
+    setCurrentIndex((prev) => (prev < galleryData.length - 1 ? prev + 1 : 0))
+  }
+
   return (
-    <div className="h-[300vh] bg-gray-100">
-      <div className="fixed inset-0">
-        <canvas ref={canvasRef} className="w-full h-full" />
-      </div>
-      <div className="fixed top-0 left-0 right-0 p-4 bg-white bg-opacity-80">
-        <h1 className="text-3xl font-bold text-center">PEAK AI</h1>
-      </div>
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-black bg-opacity-80 text-white">
-        <h2 className="text-2xl font-bold">{galleryData[currentIndex].title}</h2>
-        <p>{galleryData[currentIndex].description}</p>
-      </div>
-      <div className="fixed bottom-4 right-4 bg-white bg-opacity-80 p-2 rounded">
-        <p className="text-sm">スクロールしてナビゲート</p>
-      </div>
-      {selectedImage !== null && (
-        <div className="fixed inset-0 bg-[#FF6B6B] z-50 overflow-auto">
-          <div className="max-w-4xl mx-auto p-8">
-            <button
-              onClick={handleCloseFullPage}
-              className="absolute top-4 right-4 text-white text-2xl"
-            >
-              ×
-            </button>
-            <div className="flex flex-col md:flex-row items-start">
-              <div className="md:w-1/2 pr-8">
-                <h2 className="text-4xl font-bold text-white mb-4">{galleryData[selectedImage].title}</h2>
-                <img
-                  src={galleryData[selectedImage].image}
-                  alt={galleryData[selectedImage].title}
-                  className="w-full h-auto mb-4 rounded-lg shadow-lg"
-                />
-              </div>
-              <div className="md:w-1/2">
-                <p className="text-white text-lg leading-relaxed">{galleryData[selectedImage].content}</p>
-              </div>
-            </div>
+    <AnimatePresence>
+      <div className="h-[300vh] bg-gray-100">
+        {isLoading && (
+          <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+            <p className="text-2xl font-bold">Loading...</p>
           </div>
+        )}
+        <div className="fixed inset-0">
+          <canvas ref={canvasRef} className="w-full h-full" />
         </div>
-      )}
-    </div>
+        <header className="fixed top-0 left-0 right-0 p-4 bg-white bg-opacity-80">
+          <h1 className="text-3xl font-bold text-center">PEAK AI</h1>
+        </header>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed bottom-0 left-0 right-0 p-4 bg-black bg-opacity-80 text-white"
+          >
+            <h2 className="text-2xl font-bold">{galleryData[currentIndex].title}</h2>
+            <p>{galleryData[currentIndex].description}</p>
+          </motion.div>
+        </AnimatePresence>
+        <div className="fixed bottom-4 right-4 bg-white bg-opacity-80 p-2 rounded">
+          <p className="text-sm">スクロールしてナビゲート</p>
+        </div>
+        <div className="fixed bottom-4 left-4 flex space-x-2">
+          <button
+            onClick={handlePrevImage}
+            className="bg-white bg-opacity-80 p-2 rounded"
+            aria-label="Previous image"
+          >
+            <ChevronLeft />
+          </button>
+          <button
+            onClick={handleNextImage}
+            className="bg-white bg-opacity-80 p-2 rounded"
+            aria-label="Next image"
+          >
+            <ChevronRight />
+          </button>
+        </div>
+        <AnimatePresence>
+          {selectedImage !== null && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-[#fd682c] z-50 overflow-auto"
+            >
+              <div className="max-w-4xl mx-auto p-8">
+                <button
+                  onClick={handleCloseFullPage}
+                  className="absolute top-4 right-4 text-white text-2xl"
+                >
+                  ×
+                </button>
+                <div className="flex flex-col md:flex-row items-start">
+                  <div className="md:w-1/2 pr-8">
+                    <h2 className="text-4xl font-bold text-white mb-4">{galleryData[selectedImage].title}</h2>
+                    <img
+                      src={galleryData[selectedImage].image}
+                      alt={galleryData[selectedImage].title}
+                      className="w-full h-auto mb-4 rounded-lg shadow-lg"
+                    />
+                  </div>
+                  <div className="md:w-1/2">
+                    <p className="text-white text-lg leading-relaxed">{galleryData[selectedImage].content}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </AnimatePresence>
   )
 }
