@@ -7,6 +7,7 @@ import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRe
 import { Info, ChevronLeft, ChevronRight } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+
 interface GalleryItem {
   image: string;
   title: string;
@@ -58,7 +59,6 @@ const galleryData = [
     content: 'A March 2019 study revealed that Natural Language Processing predictive models can capture noncognitive traits, such as Intrinsic Motivation, with a precision of 90% (0.90 AUC Score). This breakthrough in NLP technology demonstrates its potential to assess complex psychological constructs through language analysis. The ability to accurately measure noncognitive traits using automated systems could have far-reaching implications in fields like education, career counseling, and personal development, offering new ways to understand and nurture human potential.'
   }
 ]
-
 export default function Gallery() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -227,17 +227,27 @@ export default function Gallery() {
 
     window.addEventListener('scroll', handleScroll)
 
+    // Add this new event listener for the Escape key
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
     return () => {
       window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('mousemove', onMouseMove)
       window.removeEventListener('click', onMouseClick)
+      window.removeEventListener('keydown', handleKeyDown);
     }
   }, [])
 
-  const handleCloseFullPage = () => {
-    setSelectedImage(null)
-  }
+  const handleCloseFullPage = useCallback(() => {
+    setSelectedImage(null);
+  }, []);
 
   return (
     <div className="h-[300vh] bg-gray-100">
