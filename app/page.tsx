@@ -17,45 +17,45 @@ interface GalleryItem {
 const galleryData = [
   { 
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00008-950881081-min-VmJJLmOyrgkxKsodROIqDaLLEap0SD.png',
-    title: '日食の瞬間',
-    description: '丘の上に立つ孤独な人物が、畏敬の念を抱かせる日食の光景を目撃しています。',
-    content: '人々は、自分の意見を村度なく言える場所として重宝にし、また自身の発言に共感が集まることを体験し自己肯定感を高めていった。これまで承認欲求を満たされず、リアルな場では時に寡黙し、心を閉ざしがちだったこともあるような人が、その居心地の良い場を見つけ表現を重ねたくなったことについては、ソーシャルメディアの価値も評価されるべきだろう。しかし、何事も過ぎれば害となる。その居心地の良さに胡坐(あぐら)をかき、好き放題してしまうと特有のベネフィットはいずれ消失してしまう。要はバランスが大切だということ。リアルの懸念をデジタル上で発散しても、リアルの問題は解決しない。言い放って気分が幾分晴れたとしても、それが起因となってリアルに向かい合う機会を阻害することになる。いつしかリアルな接点を一切求めなくなるようなことさえ起きてしまいそうだ。'
+    title: 'NLP Predicts Personality',
+    description: 'Natural Language Processing can predict personality traits through text analysis with an accuracy of 94%',
+    content: 'A groundbreaking study published in May 2021 has revealed that Natural Language Processing (NLP) techniques can predict personality traits through text analysis with an impressive accuracy of 94%. This research opens up new possibilities for understanding human behavior and communication patterns through automated analysis of written text. The implications of this technology span across various fields, including psychology, marketing, and human resources, potentially revolutionizing how we assess and understand individual personalities in both personal and professional contexts.'
   },
   {
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00011-950881084-min-Fab5OfmUCuRpxVWSVFkVkqOG4T0aU6.png',
-    title: '月の顔',
-    description: '人間の顔と月のテクスチャーや色彩が融合したシュールな肖像画。',
-    content: 'さて、突然のコロナ禍で日常生活に入り込んできたリモートワーク。在宅勤務や外出自粛のおかげでECサイトは軒並み好調だという。ボタン一つで何でも手に入る、店舗に行って商品の説明を聞かなくても、サイトのレビューを読めば何となくクオリティもわかるとなれば、実店舗を訪れる必要性も薄れてくるのは仕方がない。面白いのは洋服や靴など、「実際に試着してみないとちょっと買えないよね」と思いそうなものでさえ、普通にECでやりとりされていること。「その素材の質感や着心地、履き心地などはやはりリアルでなければ」とも思うのだがそうでもないらしい。そんな生活者の認識や行動を背景に、危機を迎えた中国の靴店がある。創業167年の老舗靴店「ニーアリンジャン」だ。過去には毛沢東も顧客であったという。しかしこのコロナ禍でご多分に漏れず、北京当局の検疫措置により店頭営業が禁止されてしまう。長い歴史でこれまで培った店舗営業や接客ノウハウがある日、突然封印されてしまったのだ。通常であれば途方に暮れるが、彼らは強かった。まるで経験のない、オンラインで顧客と繋がる「ライブコマース」に打って出たのだ。'
+    title: 'CV Analysis Predicts Personality',
+    description: 'Natural Language Processing predicts the personalities of candidates based only in their CV analysis',
+    content: 'In September 2021, researchers unveiled a novel application of Natural Language Processing (NLP) that can predict candidates\' personalities based solely on their CV analysis. This innovative approach to personality assessment could significantly impact recruitment processes, allowing for more efficient and objective evaluations of job applicants. By analyzing the language, structure, and content of CVs, the NLP algorithms can infer various personality traits, potentially providing valuable insights to employers and streamlining the hiring process.'
   },
   {
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00014-3792969356-min-JVYldqamJ5BUsz8qjsSOlbGTXJ9Wqr.png',
-    title: '幻想的な和装',
-    description: '夢のような色彩豊かな雰囲気に包まれた、伝統的な和装を着た若い女性。',
-    content: '人々は、自分の意見を村度なく言える場所として重宝にし、また自身の発言に共感が集まることを体験し自己肯定感を高めていった。これまで承認欲求を満たされず、リアルな場では時に寡黙し、心を閉ざしがちだったこともあるような人が、その居心地の良い場を見つけ表現を重ねたくなったことについては、ソーシャルメディアの価値も評価されるべきだろう。しかし、何事も過ぎれば害となる。その居心地の良さに胡坐(あぐら)をかき、好き放題してしまうと特有のベネフィットはいずれ消失してしまう。要はバランスが大切だということ。リアルの懸念をデジタル上で発散しても、リアルの問題は解決しない。言い放って気分が幾分晴れたとしても、それが起因となってリアルに向かい合う機会を阻害することになる。いつしかリアルな接点を一切求めなくなるようなことさえ起きてしまいそうだ。'
+    title: 'NLP Predicts Age and Gender',
+    description: 'Natural Language Processing predicts personality using textual data from public posts with an average accuracy of 98% for age prediction and 94% for gender prediction.',
+    content: 'A November 2019 study demonstrated that Natural Language Processing can predict personality traits, age, and gender using textual data from public posts with remarkable accuracy. The research showed an average accuracy of 98% for age prediction and 94% for gender prediction. This advancement in NLP technology raises important questions about privacy and the ethical use of public data, while also showcasing the potential for more personalized and targeted communication strategies in various industries.'
   },
   {
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00019-2612175235-min-lQADKHJ9EbUEP9OTVVLayqoraYqMKs.png',
-    title: '時の舞',
-    description: '複雑な時計仕掛けと金色の色調に囲まれた、芸者の抽象的な表現。',
-    content: 'さて、突然のコロナ禍で日常生活に入り込んできたリモートワーク。在宅勤務や外出自粛のおかげでECサイトは軒並み好調だという。ボタン一つで何でも手に入る、店舗に行って商品の説明を聞かなくても、サイトのレビューを読めば何となくクオリティもわかるとなれば、実店舗を訪れる必要性も薄れてくるのは仕方がない。面白いのは洋服や靴など、「実際に試着してみないとちょっと買えないよね」と思いそうなものでさえ、普通にECでやりとりされていること。「その素材の質感や着心地、履き心地などはやはりリアルでなければ」とも思うのだがそうでもないらしい。そんな生活者の認識や行動を背景に、危機を迎えた中国の靴店がある。創業167年の老舗靴店「ニーアリンジャン」だ。過去には毛沢東も顧客であったという。しかしこのコロナ禍でご多分に漏れず、北京当局の検疫措置により店頭営業が禁止されてしまう。長い歴史でこれまで培った店舗営業や接客ノウハウがある日、突然封印されてしまったのだ。通常であれば途方に暮れるが、彼らは強かった。まるで経験のない、オンラインで顧客と繋がる「ライブコマース」に打って出たのだ。'
+    title: 'NLP Calculates Cognitive Load',
+    description: 'Natural Language Processing is used to calculate cognitive load from verbal behavioural data and examine specific thinking patterns.',
+    content: 'In November 2022, researchers reported using Natural Language Processing to calculate cognitive load from verbal behavioral data and examine specific thinking patterns. This innovative application of NLP technology offers new insights into human cognition and mental processes. By analyzing speech patterns and verbal cues, researchers can now better understand how individuals process information and respond to various cognitive demands, potentially leading to advancements in fields such as education, psychology, and human-computer interaction.'
   },
   {
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00030-1894949390-min-vfv8Q8XkOZ4ffv2wK5ViSS4HjzNRHF.png',
-    title: '和の宇宙',
-    description: '宇宙的なパターンと日本の伝統的なモチーフを背景に、華やかな着物を着た芸者。',
-    content: '人々は、自分の意見を村度なく言える場所として重宝にし、また自身の発言に共感が集まることを体験し自己肯定感を高めていった。これまで承認欲求を満たされず、リアルな場では時に寡黙し、心を閉ざしがちだったこともあるような人が、その居心地の良い場を見つけ表現を重ねたくなったことについては、ソーシャルメディアの価値も評価されるべきだろう。しかし、何事も過ぎれば害となる。その居心地の良さに胡坐(あぐら)をかき、好き放題してしまうと特有のベネフィットはいずれ消失してしまう。要はバランスが大切だということ。リアルの懸念をデジタル上で発散しても、リアルの問題は解決しない。言い放って気分が幾分晴れたとしても、それが起因となってリアルに向かい合う機会を阻害することになる。いつしかリアルな接点を一切求めなくなるようなことさえ起きてしまいそうだ。'
+    title: 'Speech Data Predicts Cognitive Load',
+    description: 'Assessment of cognitive load based only on speech data has an accuracy of 92%',
+    content: 'A study published in September 2010 revealed that the assessment of cognitive load based solely on speech data can achieve an accuracy of 92%. This finding demonstrates the potential of using voice analysis as a non-invasive method to measure mental workload and cognitive stress. The high accuracy of this approach could lead to applications in various fields, such as monitoring cognitive fatigue in high-stress occupations, optimizing learning environments, and improving human-machine interfaces.'
   },
   {
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00032-1894949392-min-zKuTSJBUwDoxBb1ysCYYrdbgwowciF.png',
-    title: '紅の舞',
-    description: '鮮やかな赤い着物を着た芸者が、抽象的なパターンと伝統的なモチーフの渦の中で舞っています。',
-    content: 'さて、突然のコロナ禍で日常生活に入り込んできたリモートワーク。在宅勤務や外出自粛のおかげでECサイトは軒並み好調だという。ボタン一つで何でも手に入る、店舗に行って商品の説明を聞かなくても、サイトのレビューを読めば何となくクオリティもわかるとなれば、実店舗を訪れる必要性も薄れてくるのは仕方がない。面白いのは洋服や靴など、「実際に試着してみないとちょっと買えないよね」と思いそうなものでさえ、普通にECでやりとりされていること。「その素材の質感や着心地、履き心地などはやはりリアルでなければ」とも思うのだがそうでもないらしい。そんな生活者の認識や行動を背景に、危機を迎えた中国の靴店がある。創業167年の老舗靴店「ニーアリンジャン」だ。過去には毛沢東も顧客であったという。しかしこのコロナ禍でご多分に漏れず、北京当局の検疫措置により店頭営業が禁止されてしまう。長い歴史でこれまで培った店舗営業や接客ノウハウがある日、突然封印されてしまったのだ。通常であれば途方に暮れるが、彼らは強かった。まるで経験のない、オンラインで顧客と繋がる「ライブコマース」に打って出たのだ。'
+    title: 'ML Analyzes Speech and Cognitive Load',
+    description: 'Machine Learning analysis is an efficient way to measure the relationship between speech features and cognitive load.',
+    content: 'In April 2019, researchers demonstrated that Machine Learning analysis is an efficient way to measure the relationship between speech features and cognitive load. This study highlights the potential of AI-driven speech analysis in understanding human cognitive processes. By identifying correlations between specific speech patterns and mental workload, this approach could lead to more accurate and less intrusive methods of assessing cognitive states in real-time, with applications in fields such as workplace safety, driver alertness monitoring, and adaptive learning systems.'
   },
   {
     image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00033-1894949393-min-6EF5ToCeceuHDlfcUwxm3F9N4h9fpX.png',
-    title: '花火の影',
-    description: '鮮やかで抽象的な花火を背景に、日傘を持つ芸者のシルエットが浮かび上がっています。',
-    content: '人々は、自分の意見を村度なく言える場所として重宝にし、また自身の発言に共感が集まることを体験し自己肯定感を高めていった。これまで承認欲求を満たされず、リアルな場では時に寡黙し、心を閉ざしがちだったこともあるような人が、その居心地の良い場を見つけ表現を重ねたくなったことについては、ソーシャルメディアの価値も評価されるべきだろう。しかし、何事も過ぎれば害となる。その居心地の良さに胡坐(あぐら)をかき、好き放題してしまうと特有のベネフィットはいずれ消失してしまう。要はバランスが大切だということ。リアルの懸念をデジタル上で発散しても、リアルの問題は解決しない。言い放って気分が幾分晴れたとしても、それが起因となってリアルに向かい合う機会を阻害することになる。いつしかリアルな接点を一切求めなくなるようなことさえ起きてしまいそうだ。'
+    title: 'NLP Captures Noncognitive Traits',
+    description: 'Natural Language Processing predictive models can capture noncognitive traits, like Intrinsic Motivation, with a precision of 90% (0.90 AUC Score).',
+    content: 'A March 2019 study revealed that Natural Language Processing predictive models can capture noncognitive traits, such as Intrinsic Motivation, with a precision of 90% (0.90 AUC Score). This breakthrough in NLP technology demonstrates its potential to assess complex psychological constructs through language analysis. The ability to accurately measure noncognitive traits using automated systems could have far-reaching implications in fields like education, career counseling, and personal development, offering new ways to understand and nurture human potential.'
   }
 ]
 
