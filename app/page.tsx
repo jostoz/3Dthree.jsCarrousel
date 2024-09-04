@@ -255,7 +255,7 @@ export default function Gallery() {
         <p className="text-sm">スクロールしてナビゲート</p>
       </div>
       {selectedImage !== null && (
-        <div className="fixed inset-0 bg-[#FF6B6B] z-50 overflow-auto">
+        <div className="fixed inset-0 bg-[#f87e2d] z-50 overflow-auto">
           <div className="max-w-4xl mx-auto p-8">
             <button
               onClick={handleCloseFullPage}
