@@ -245,7 +245,7 @@ export default function Gallery() {
         <canvas ref={canvasRef} className="w-full h-full" />
       </div>
       <div className="fixed top-0 left-0 right-0 p-4 bg-white bg-opacity-80">
-        <h1 className="text-3xl font-bold text-center">LIONS GOOD NEWS 2023</h1>
+        <h1 className="text-3xl font-bold text-center">PEAK AI</h1>
       </div>
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-black bg-opacity-80 text-white">
         <h2 className="text-2xl font-bold">{galleryData[currentIndex].title}</h2>
