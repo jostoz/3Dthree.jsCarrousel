@@ -17,46 +17,52 @@ interface GalleryItem {
 
 const galleryData = [
   { 
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00008-950881081-min-VmJJLmOyrgkxKsodROIqDaLLEap0SD.png',
-    title: 'NLP Predicts Personality',
-    description: 'Natural Language Processing can predict personality traits through text analysis with an accuracy of 94%',
-    content: 'A groundbreaking study published in May 2021 has revealed that Natural Language Processing (NLP) techniques can predict personality traits through text analysis with an impressive accuracy of 94%. This research opens up new possibilities for understanding human behavior and communication patterns through automated analysis of written text. The implications of this technology span across various fields, including psychology, marketing, and human resources, potentially revolutionizing how we assess and understand individual personalities in both personal and professional contexts.'
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+    title: '🎙️ Real-time Voice AI Platform',
+    description: 'Hybrid voice system with 50ms latency combining instant responses and deep analysis using LiveKit and OpenAI Realtime API',
+    content: 'Architected a cutting-edge hybrid voice system achieving unprecedented 50ms response latency with dual pipeline architecture for instant responses and deep analysis. The system reduces operational costs by 40% while maintaining 95% accuracy in responses. Built using LiveKit and OpenAI Realtime API, this platform represents the future of conversational AI with real-time voice processing capabilities that handle thousands of concurrent users seamlessly.'
   },
   {
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00011-950881084-min-Fab5OfmUCuRpxVWSVFkVkqOG4T0aU6.png',
-    title: 'CV Analysis Predicts Personality',
-    description: 'Natural Language Processing predicts the personalities of candidates based only in their CV analysis',
-    content: 'In September 2021, researchers unveiled a novel application of Natural Language Processing (NLP) that can predict candidates\' personalities based solely on their CV analysis. This innovative approach to personality assessment could significantly impact recruitment processes, allowing for more efficient and objective evaluations of job applicants. By analyzing the language, structure, and content of CVs, the NLP algorithms can infer various personality traits, potentially providing valuable insights to employers and streamlining the hiring process.'
+    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop',
+    title: '🤖 Pre-ChatGPT Commerce Chatbot',
+    description: 'Pioneer conversational commerce system processing 1000+ daily orders with NLU before GPT era',
+    content: 'Developed a groundbreaking conversational commerce chatbot before the ChatGPT era, processing over 1000 daily orders with advanced Natural Language Understanding. The system integrated payment processing and real-time kitchen notifications, achieving a 70% reduction in order processing time. Built using Dialogflow and Firebase, this innovative solution demonstrated the power of AI-driven commerce automation when such technology was still in its infancy.'
   },
   {
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00014-3792969356-min-JVYldqamJ5BUsz8qjsSOlbGTXJ9Wqr.png',
-    title: 'NLP Predicts Age and Gender',
-    description: 'Natural Language Processing predicts personality using textual data from public posts with an average accuracy of 98% for age prediction and 94% for gender prediction.',
-    content: 'A November 2019 study demonstrated that Natural Language Processing can predict personality traits, age, and gender using textual data from public posts with remarkable accuracy. The research showed an average accuracy of 98% for age prediction and 94% for gender prediction. This advancement in NLP technology raises important questions about privacy and the ethical use of public data, while also showcasing the potential for more personalized and targeted communication strategies in various industries.'
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+    title: '📱 National Telecom Database (Qronecta)',
+    description: 'Verification system for 100M+ phone numbers with geographic segmentation for government contracts',
+    content: 'Engineered a comprehensive national telecommunications verification system handling over 100 million phone numbers with sophisticated geographic segmentation by postal code. Developed proprietary algorithms for massive verification processes that secured government contracts for national SMS alert services. The system provides real-time verification capabilities and geographic targeting essential for political campaigns and national emergency alerts.'
   },
   {
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00019-2612175235-min-lQADKHJ9EbUEP9OTVVLayqoraYqMKs.png',
-    title: 'NLP Calculates Cognitive Load',
-    description: 'Natural Language Processing is used to calculate cognitive load from verbal behavioural data and examine specific thinking patterns.',
-    content: 'In November 2022, researchers reported using Natural Language Processing to calculate cognitive load from verbal behavioral data and examine specific thinking patterns. This innovative application of NLP technology offers new insights into human cognition and mental processes. By analyzing speech patterns and verbal cues, researchers can now better understand how individuals process information and respond to various cognitive demands, potentially leading to advancements in fields such as education, psychology, and human-computer interaction.'
+    image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=600&fit=crop',
+    title: '💰 Financial Data Processing (FXState)',
+    description: 'Robust financial system with strict validation achieving 90% error reduction and 40% speed improvement',
+    content: 'Developed a comprehensive financial data processing system with rigorous validation protocols, achieving a remarkable 90% reduction in data errors. Implemented over 100 test cases ensuring complete data integrity while improving processing speed by 40%. Built using Pydantic v2 and advanced Type Hints, the system handles complex financial transactions with enterprise-grade reliability and performance optimization.'
   },
   {
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00030-1894949390-min-vfv8Q8XkOZ4ffv2wK5ViSS4HjzNRHF.png',
-    title: 'Speech Data Predicts Cognitive Load',
-    description: 'Assessment of cognitive load based only on speech data has an accuracy of 92%',
-    content: 'A study published in September 2010 revealed that the assessment of cognitive load based solely on speech data can achieve an accuracy of 92%. This finding demonstrates the potential of using voice analysis as a non-invasive method to measure mental workload and cognitive stress. The high accuracy of this approach could lead to applications in various fields, such as monitoring cognitive fatigue in high-stress occupations, optimizing learning environments, and improving human-machine interfaces.'
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop',
+    title: '🧠 Mental Health AI Platform',
+    description: 'Emotion-aware therapy application processing 10K+ sessions with crisis intervention capabilities',
+    content: 'Created an innovative emotion-aware therapy application that has processed over 10,000 therapy sessions with advanced psychological pattern detection and crisis intervention capabilities. The platform achieves 92% user satisfaction while maintaining HIPAA compliance. Using Hume AI for emotion detection, the system provides real-time psychological support with intelligent escalation protocols for crisis situations.'
   },
   {
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00032-1894949392-min-zKuTSJBUwDoxBb1ysCYYrdbgwowciF.png',
-    title: 'ML Analyzes Speech and Cognitive Load',
-    description: 'Machine Learning analysis is an efficient way to measure the relationship between speech features and cognitive load.',
-    content: 'In April 2019, researchers demonstrated that Machine Learning analysis is an efficient way to measure the relationship between speech features and cognitive load. This study highlights the potential of AI-driven speech analysis in understanding human cognitive processes. By identifying correlations between specific speech patterns and mental workload, this approach could lead to more accurate and less intrusive methods of assessing cognitive states in real-time, with applications in fields such as workplace safety, driver alertness monitoring, and adaptive learning systems.'
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop',
+    title: '🎓 AI Educational Platforms Suite',
+    description: 'Complete educational suite using GPT-4 and custom LLMs with LangGraph workflows processing 10K+ daily queries',
+    content: 'Architected a comprehensive suite of AI educational platforms (IGE MODEL, TUTOR AI, NIMBUS AI) utilizing GPT-4 and custom Large Language Models. Implemented sophisticated LangGraph workflows for intelligent agent orchestration, processing over 10,000 daily educational queries. The platform features personalized learning algorithms that improve student retention by 40% through adaptive AI-driven content delivery and assessment.'
   },
   {
-    image: 'https://fin4vyigxmq2nrbp.public.blob.vercel-storage.com/00033-1894949393-min-6EF5ToCeceuHDlfcUwxm3F9N4h9fpX.png',
-    title: 'NLP Captures Noncognitive Traits',
-    description: 'Natural Language Processing predictive models can capture noncognitive traits, like Intrinsic Motivation, with a precision of 90% (0.90 AUC Score).',
-    content: 'A March 2019 study revealed that Natural Language Processing predictive models can capture noncognitive traits, such as Intrinsic Motivation, with a precision of 90% (0.90 AUC Score). This breakthrough in NLP technology demonstrates its potential to assess complex psychological constructs through language analysis. The ability to accurately measure noncognitive traits using automated systems could have far-reaching implications in fields like education, career counseling, and personal development, offering new ways to understand and nurture human potential.'
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop',
+    title: '🏢 High-Performance Team Formation (Stratos)',
+    description: 'Big Five personality classification system for agile team optimization used by 50+ organizations',
+    content: 'Engineered an advanced Big Five personality classification system for optimizing agile team formation and performance. The web platform is actively used by over 50 organizations, implementing sophisticated algorithms for agile coach evaluation and optimized team composition. The system analyzes personality traits, work styles, and collaboration patterns to create high-performing teams with measurable improvements in productivity and team satisfaction.'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop',
+    title: '🆘 Post-Trauma Voice Support App',
+    description: 'Educational post-trauma application with Vapi voice integration and real-time crisis detection',
+    content: 'Developed a sensitive post-trauma educational application featuring advanced Vapi voice integration with crisis-aware conversational flows. The system provides real-time crisis detection and response, reducing emergency response time by 70% for the Yo Digo No Más Foundation. The application combines therapeutic conversation patterns with immediate escalation protocols, providing crucial support during vulnerable moments while maintaining user privacy and dignity.'
   }
 ]
 export default function Gallery() {
@@ -254,18 +260,20 @@ export default function Gallery() {
       <div className="fixed inset-0">
         <canvas ref={canvasRef} className="w-full h-full" />
       </div>
-      <div className="fixed top-0 left-0 right-0 p-4 bg-white bg-opacity-80">
-        <h1 className="text-3xl font-bold text-center">PEAK AI</h1>
+      <div className="fixed top-0 left-0 right-0 p-4 bg-white bg-opacity-90">
+        <h1 className="text-3xl font-bold text-center text-gray-800">Hi, I'm Josué Tostado 👋</h1>
+        <p className="text-center text-gray-600 mt-1">Senior AI Engineer & Machine Learning Specialist 🤖</p>
       </div>
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-black bg-opacity-80 text-white">
         <h2 className="text-2xl font-bold">{galleryData[currentIndex].title}</h2>
         <p>{galleryData[currentIndex].description}</p>
       </div>
-      <div className="fixed bottom-4 right-4 bg-white bg-opacity-80 p-2 rounded">
-        <p className="text-sm">スクロールしてナビゲート</p>
+      <div className="fixed bottom-4 right-4 bg-white bg-opacity-90 p-3 rounded-lg shadow-lg">
+        <p className="text-sm text-gray-700 font-medium">📜 Scroll to navigate</p>
+        <p className="text-xs text-gray-500 mt-1">Click projects for details</p>
       </div>
       {selectedImage !== null && (
-        <div className="fixed inset-0 bg-[#f87e2d] z-50 overflow-auto">
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 z-50 overflow-auto">
           <div className="max-w-4xl mx-auto p-8">
             <button
               onClick={handleCloseFullPage}
